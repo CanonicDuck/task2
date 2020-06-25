@@ -1,6 +1,6 @@
 package task2;
 
-public class exam {
+public class FirstTask {
     public static void main(String[] args) throws Exception{
         PGMImage imRand = new PGMImage(80,60);
         PGMImage imGrad = new PGMImage(80,60);

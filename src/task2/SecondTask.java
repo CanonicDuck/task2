@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileInputStream;
 
-public class ImageToPGM extends Application {
+public class SecondTask extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setScene(new Scene(initInterface(primaryStage), 400, 400));
