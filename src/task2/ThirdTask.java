@@ -30,7 +30,7 @@ public class ThirdTask extends Application {
 
         ImageView iv = new ImageView();
         Label l = new Label();
-        Button b = new Button("Choose File");
+        Button b = new Button("Choose PGM File to transfer to PNG");
         FileChooser fc = new FileChooser();
         b.setOnAction(e -> {
             File chImg = fc.showOpenDialog(primaryStage);
@@ -51,15 +51,15 @@ public class ThirdTask extends Application {
                 pic = new int[w][h];
                 for (int i = 0; i < h; i++) {
                     for (int j = 0; j < w; j++) {
-                        pic[i][j] = Integer.parseInt(sc.next());
-                        wi.getPixelWriter().setColor(j, i, Color.gray((double) pic[i][j]/255));
-                        System.out.print(pic[i][j] + " ");
+                        pic[j][i] = Integer.parseInt(sc.next());
+                        wi.getPixelWriter().setColor(j, i, Color.gray((double) pic[j][i]/255));
+                        System.out.print(pic[j][i] + " ");
                     }
                     System.out.println();
                 }
                 iv.setImage(wi);
 
-                File file = new File("test.png");
+                File file = new File("task3result.png");
                 RenderedImage renderedImage = SwingFXUtils.fromFXImage(wi, null);
                 ImageIO.write(renderedImage, "png", file);
 

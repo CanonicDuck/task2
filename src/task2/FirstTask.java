@@ -18,6 +18,10 @@ public class FirstTask {
             }
         }
 
+        imRand.saveTo("imRand.pgm");
+        imGrad.saveTo("imGrad.pgm");
+
+        /*
         int k = 0;
         for (int i = 0; i < imTest.height; i++) {
             for (int j = 0; j < imTest.width; j++) {
@@ -26,12 +30,8 @@ public class FirstTask {
             }
         }
         imTest.setPixel(1, 3, 0);
-
-
-        imRand.saveTo("imRand.pgm");
-        imGrad.saveTo("imGrad.pgm");
         imTest.saveTo("imTest.pgm");
-
+        */
     }
 }
 
